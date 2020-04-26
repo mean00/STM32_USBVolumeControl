@@ -1,0 +1,9 @@
+[submodule "cmake"]
+	path = cmake
+	url = https://github.com/mean00/arduino-cmake-stm32.git
+[submodule "FreeRTOS"]
+	path = FreeRTOS
+	url = https://github.com/mean00/MapleFreeRTOS1000.git
+[submodule "Arduino_STM32"]
+	path = Arduino_STM32
+	url = https://github.com/rogerclarkmelbourne/Arduino_STM32
