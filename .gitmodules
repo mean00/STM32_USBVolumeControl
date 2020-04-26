@@ -7,3 +7,6 @@
 [submodule "Arduino_STM32"]
 	path = Arduino_STM32
 	url = https://github.com/rogerclarkmelbourne/Arduino_STM32
+[submodule "RotaryEncoder"]
+	path = RotaryEncoder
+	url = https://github.com/mean00/RotaryEncoder_FreeRTOS.git
