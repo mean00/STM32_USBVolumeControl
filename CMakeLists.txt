@@ -8,6 +8,7 @@ IF(NOT DEFINED CONFIGURATION)
 ENDIF(NOT DEFINED CONFIGURATION)
 
 include(./platformConfig.cmake)
+include_directories(${PLATFORM_PATH}/Core/inc/)
 SET(CMAKE_TOOLCHAIN_FILE cmake/ArduinoToolchain.cmake)
 MESSAGE(STATUS "Starting VolumeControl ")
 ADD_DEFINITIONS("-g3")
@@ -20,7 +21,7 @@ set(ARDUINO_DEFAULT_PORT ttyACM0) # Default Port, when not specified
 set(ARDUINO_CPU          STM32F103C8)
 SET(libPrefix ${ARDUINO_DEFAULT_BOARD}_)
 #
-SET(SUB_COMPONENTS FreeRTOS RotaryEncoder)
+SET(SUB_COMPONENTS FreeRTOS RotaryEncoder HID)
 FOREACH(comp ${SUB_COMPONENTS})
     include_directories(${comp})
 ENDFOREACH(comp ${SUB_COMPONENTS})
@@ -28,6 +29,10 @@ ENDFOREACH(comp ${SUB_COMPONENTS})
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(FreeRTOS/Source/include)
 include_directories(FreeRTOS/Source/portable/Stm32duino/)
+
+
+
+
 # Build 
 FOREACH(comp ${SUB_COMPONENTS})
     add_subdirectory(${comp})

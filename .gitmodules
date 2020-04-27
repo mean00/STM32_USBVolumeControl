@@ -10,3 +10,6 @@
 [submodule "RotaryEncoder"]
 	path = RotaryEncoder
 	url = https://github.com/mean00/RotaryEncoder_FreeRTOS.git
+[submodule "HID/USBComposite"]
+	path = HID/USBComposite
+	url = https://github.com/arpruss/USBComposite_stm32f1.git
